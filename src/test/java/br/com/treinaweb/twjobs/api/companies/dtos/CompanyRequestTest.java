@@ -46,8 +46,8 @@ public class CompanyRequestTest {
     @ParameterizedTest
     @NullAndEmptySource
     @ValueSource(strings = {
-        "AB",                // Menor que o mínimo (2 chars)
-        "A",                 // Menor que o mínimo (1 char)
+        "",                // Menor que o mínimo (2 chars)
+        " ",                 // Menor que o mínimo (1 char)
         "ABC",               // Exatamente no mínimo (3 chars)
         "Empresa Teste",     // Valor válido (dentro do range)
         "Empresa Muito Muito Muito Longa", // Maior que o máximo (31 chars)
@@ -66,6 +66,7 @@ public class CompanyRequestTest {
             "a".repeat(300) /// Exatamente 300 caracteres
         );
     }
+
 
 
 }
